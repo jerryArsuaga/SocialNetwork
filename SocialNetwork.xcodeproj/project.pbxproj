@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6F497EA740CD467281D99590 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C99E408A8E7BC83DCE16E2C /* Pods_SocialNetwork.framework */; };
+		828035CF1D81CC840079EE4D /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035CE1D81CC840079EE4D /* FancyView.swift */; };
+		828035D31D81CD140079EE4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D21D81CD140079EE4D /* Constants.swift */; };
+		828035D61D81D0200079EE4D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D51D81D0200079EE4D /* RoundButton.swift */; };
+		828035D81D81D1B20079EE4D /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D71D81D1B20079EE4D /* FancyField.swift */; };
+		828035DA1D81D2EE0079EE4D /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D91D81D2EE0079EE4D /* FancyButton.swift */; };
 		82DE45DE1D81A94E00A6CD39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE45DD1D81A94E00A6CD39 /* AppDelegate.swift */; };
 		82DE45E01D81A94E00A6CD39 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE45DF1D81A94E00A6CD39 /* SignInVC.swift */; };
 		82DE45E31D81A94E00A6CD39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DE45E11D81A94E00A6CD39 /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		828035CE1D81CC840079EE4D /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		828035D21D81CD140079EE4D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		828035D51D81D0200079EE4D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		828035D71D81D1B20079EE4D /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		828035D91D81D2EE0079EE4D /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		82DE45DA1D81A94E00A6CD39 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DE45DD1D81A94E00A6CD39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82DE45DF1D81A94E00A6CD39 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -69,6 +79,10 @@
 		827A4B341D81AC980083272B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				828035CE1D81CC840079EE4D /* FancyView.swift */,
+				828035D51D81D0200079EE4D /* RoundButton.swift */,
+				828035D71D81D1B20079EE4D /* FancyField.swift */,
+				828035D91D81D2EE0079EE4D /* FancyButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -79,6 +93,22 @@
 				82DE45DF1D81A94E00A6CD39 /* SignInVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		828035D01D81CCF90079EE4D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				828035D11D81CD020079EE4D /* Constants */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		828035D11D81CD020079EE4D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				828035D21D81CD140079EE4D /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		82DE45D11D81A94E00A6CD39 = {
@@ -102,6 +132,7 @@
 		82DE45DC1D81A94E00A6CD39 /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				828035D01D81CCF90079EE4D /* Util */,
 				827A4B351D81AC9E0083272B /* Controller */,
 				827A4B341D81AC980083272B /* View */,
 				827A4B331D81AC900083272B /* Model */,
@@ -240,8 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828035D81D81D1B20079EE4D /* FancyField.swift in Sources */,
 				82DE45E01D81A94E00A6CD39 /* SignInVC.swift in Sources */,
+				828035D61D81D0200079EE4D /* RoundButton.swift in Sources */,
+				828035DA1D81D2EE0079EE4D /* FancyButton.swift in Sources */,
 				82DE45DE1D81A94E00A6CD39 /* AppDelegate.swift in Sources */,
+				828035CF1D81CC840079EE4D /* FancyView.swift in Sources */,
+				828035D31D81CD140079EE4D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
