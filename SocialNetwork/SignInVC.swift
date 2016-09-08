@@ -12,10 +12,16 @@ import FBSDKLoginKit
 import Firebase
 
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController,UITextFieldDelegate {
     
+    @IBOutlet weak var passwordField: FancyField!
+    @IBOutlet weak var emailField: FancyField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passwordField.delegate = self;
+        emailField.delegate = self;
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -69,6 +75,52 @@ class SignInVC: UIViewController {
             }
         })
     }
+    
+    
+    
+    @IBAction func signInTapped(_ sender: AnyObject) {
+        
+        
+        guard let email = emailField.text, !email.isEmpty else{
+        
+            print("The email field needs to be populated")
+            return
+            
+        }
+        
+        guard let pwd = passwordField.text , !pwd.isEmpty else{
+            
+            print("The password field needs to be populated")
+            return
+            
+        }
+        
+        
+        
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil
+                {
+                    print("Jerry: Able to authenticate with fireBase by mail")
+                }else
+                {
+                    print("Jerry: Unable to authenticate with fireBase by mail")
+                    
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if(error != nil)
+                        {
+                            print("Jerry: Unable to save user")
+                        }else
+                        {
+                            print("Jerry: User saved");
+                        }
+                    })
+                    
+                }
+            })
+        }
+        
+    
+    
     
 }
 
