@@ -119,11 +119,43 @@
                     <connections>
                         <outlet property="emailField" destination="l7p-Hm-f4R" id="cfc-qc-W4P"/>
                         <outlet property="passwordField" destination="gHN-Od-Uxm" id="TXM-ei-pyx"/>
+                        <segue destination="U9W-ek-MS8" kind="presentation" identifier="FeedVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xAS-VR-R65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="qdX-IH-upX">
+            <objects>
+                <viewController id="U9W-ek-MS8" customClass="FeedVC" customModule="SocialNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nSm-ap-qiF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cwe-MX-9Lo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tUD-mU-W2c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVH-Z4-5ec">
+                                <frame key="frameInset" minX="133" minY="318" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Sign out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="U9W-ek-MS8" eventType="touchUpInside" id="MlP-qp-1un"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hs-Gq-meT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

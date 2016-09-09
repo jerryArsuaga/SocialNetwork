@@ -2,9 +2,42 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SocialNetwork.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftKeychainWrapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0EB19C1377A747F81110D44E2D5FCF78</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>57B6AC2B2D4248090090CB27812F6250</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -19,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D9DFC2DA1E039536C2F3D5CAF6FBA90F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F5A7D162EEE9337422E01DFFCC0339C2</key>
+		<key>BC92FA4A95388879DFD3537E00385A47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
