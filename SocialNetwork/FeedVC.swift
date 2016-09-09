@@ -21,7 +21,7 @@ class FeedVC: UIViewController {
   
     @IBAction func signOutTapped(_ sender: AnyObject) {
         
-        let keyhcainResulto  = KeychainWrapper.defaultKeychainWrapper.removeObjectForKey(keyUID)
+        _ = KeychainWrapper.defaultKeychainWrapper.removeObjectForKey(keyUID)
         
         try! FIRAuth.auth()?.signOut()
         
