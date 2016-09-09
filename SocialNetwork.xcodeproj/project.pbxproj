@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F497EA740CD467281D99590 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C99E408A8E7BC83DCE16E2C /* Pods_SocialNetwork.framework */; };
+		826774CA1D8205B300F3AB0E /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826774C91D8205B300F3AB0E /* FeedVC.swift */; };
 		828035CF1D81CC840079EE4D /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035CE1D81CC840079EE4D /* FancyView.swift */; };
 		828035D31D81CD140079EE4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D21D81CD140079EE4D /* Constants.swift */; };
 		828035D61D81D0200079EE4D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D51D81D0200079EE4D /* RoundButton.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		826774C91D8205B300F3AB0E /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		828035CE1D81CC840079EE4D /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		828035D21D81CD140079EE4D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		828035D51D81D0200079EE4D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				82DE45DF1D81A94E00A6CD39 /* SignInVC.swift */,
+				826774C91D8205B300F3AB0E /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 					82DE45D91D81A94E00A6CD39 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = W2AQRMMZX2;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -282,6 +286,7 @@
 				82DE45E01D81A94E00A6CD39 /* SignInVC.swift in Sources */,
 				828035D61D81D0200079EE4D /* RoundButton.swift in Sources */,
 				828035DA1D81D2EE0079EE4D /* FancyButton.swift in Sources */,
+				826774CA1D8205B300F3AB0E /* FeedVC.swift in Sources */,
 				82DE45DE1D81A94E00A6CD39 /* AppDelegate.swift in Sources */,
 				828035CF1D81CC840079EE4D /* FancyView.swift in Sources */,
 				828035D31D81CD140079EE4D /* Constants.swift in Sources */,

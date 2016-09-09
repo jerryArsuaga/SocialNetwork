@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 
 class SignInVC: UIViewController,UITextFieldDelegate {
@@ -19,16 +20,23 @@ class SignInVC: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         passwordField.delegate = self;
         emailField.delegate = self;
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let _ = KeychainWrapper.defaultKeychainWrapper.stringForKey(keyUID)
+        {
+            performSegue(withIdentifier: "FeedVC", sender: nil)
+        }
     }
+    
     
     @IBAction func fbButtonTapped(_ sender: AnyObject) {
         
@@ -42,8 +50,8 @@ class SignInVC: UIViewController,UITextFieldDelegate {
             }else if result?.isCancelled == true{
                 
                 print("Jerry: User cancellede authentication")
-               
-  
+                
+                
             }else
             {
                 print("Jerry: Succesfully authenticated")
@@ -71,6 +79,13 @@ class SignInVC: UIViewController,UITextFieldDelegate {
             {
                 print("Jerry: Succesfully authenticated with fireBase")
                 
+                if let user = user
+                {
+                    self.completeSignIn(id: user.uid);
+                    
+                    
+                }
+                
                 
             }
         })
@@ -82,7 +97,7 @@ class SignInVC: UIViewController,UITextFieldDelegate {
         
         
         guard let email = emailField.text, !email.isEmpty else{
-        
+            
             print("The email field needs to be populated")
             return
             
@@ -97,28 +112,46 @@ class SignInVC: UIViewController,UITextFieldDelegate {
         
         
         
-            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
-                if error == nil
-                {
-                    print("Jerry: Able to authenticate with fireBase by mail")
-                }else
-                {
-                    print("Jerry: Unable to authenticate with fireBase by mail")
+        FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+            if error == nil
+            {
+                print("Jerry: Able to authenticate with fireBase by mail")
+                if let user = user{
                     
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
-                        if(error != nil)
-                        {
-                            print("Jerry: Unable to save user")
-                        }else
-                        {
-                            print("Jerry: User saved");
-                        }
-                    })
-                    
+                    self.completeSignIn(id: user.uid)
                 }
-            })
-        }
+            }else
+            {
+                print("Jerry: Unable to authenticate with fireBase by mail")
+                
+                FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                    if(error != nil)
+                    {
+                        print("Jerry: Unable to save user")
+                    }else
+                    {
+                        if let user = user{
+                        
+                            self.completeSignIn(id: user.uid)
+                        }
+                    }
+                })
+                
+            }
+        })
+    }
+    
+    func completeSignIn(id: String)
+    {
+     let keyChainResult = KeychainWrapper.defaultKeychainWrapper.setString(id, forKey: keyUID)
         
+        performSegue(withIdentifier: "FeedVC", sender: nil)
+        
+        print("Jerry: Datos guardados correctamente \(keyChainResult)");
+    }
+    
+    
+    
     
     
     
