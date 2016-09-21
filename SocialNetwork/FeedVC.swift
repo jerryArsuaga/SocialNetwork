@@ -18,6 +18,11 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        
+        //VAmos a generar un listener por si algo cambia que se actualice 
+        DataService.ds.REF_POSTS.observe(.value,with: { (snapshot) in
+            print("Jerry: \(snapshot.value)")
+        })
 
         // Do any additional setup after loading the view.
     }

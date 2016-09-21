@@ -144,6 +144,7 @@ class SignInVC: UIViewController,UITextFieldDelegate {
     
     func completeSignIn(id: String,userData: Dictionary<String,String>)
     {
+     // Esto es para tener un control de sesiones y a parte así poder hacer que el usuario inicie sesión automaticamente
      let keyChainResult = KeychainWrapper.defaultKeychainWrapper.setString(id, forKey: keyUID)
         
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
