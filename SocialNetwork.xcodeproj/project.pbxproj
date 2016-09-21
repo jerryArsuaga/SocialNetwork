@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6F497EA740CD467281D99590 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C99E408A8E7BC83DCE16E2C /* Pods_SocialNetwork.framework */; };
 		826774CA1D8205B300F3AB0E /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826774C91D8205B300F3AB0E /* FeedVC.swift */; };
+		8272F1431D8A032400F0BE71 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272F1421D8A032400F0BE71 /* PostCell.swift */; };
+		8272F1451D8A065100F0BE71 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272F1441D8A065100F0BE71 /* RoundImage.swift */; };
 		828035CF1D81CC840079EE4D /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035CE1D81CC840079EE4D /* FancyView.swift */; };
 		828035D31D81CD140079EE4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D21D81CD140079EE4D /* Constants.swift */; };
 		828035D61D81D0200079EE4D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035D51D81D0200079EE4D /* RoundButton.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		826774C91D8205B300F3AB0E /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		8272F1421D8A032400F0BE71 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		8272F1441D8A065100F0BE71 /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		828035CE1D81CC840079EE4D /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		828035D21D81CD140079EE4D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		828035D51D81D0200079EE4D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 				C75E5E23F1C5ACED74F414DC /* Pods-SocialNetwork.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		827A4B331D81AC900083272B /* Model */ = {
@@ -86,6 +91,8 @@
 				828035D51D81D0200079EE4D /* RoundButton.swift */,
 				828035D71D81D1B20079EE4D /* FancyField.swift */,
 				828035D91D81D2EE0079EE4D /* FancyButton.swift */,
+				8272F1421D8A032400F0BE71 /* PostCell.swift */,
+				8272F1441D8A065100F0BE71 /* RoundImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -120,7 +127,6 @@
 			children = (
 				82DE45DC1D81A94E00A6CD39 /* SocialNetwork */,
 				82DE45DB1D81A94E00A6CD39 /* Products */,
-				4F47D2D8C491BF42C08FD83C /* Pods */,
 				3F70839E439CF0EBF15FFB4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 				82DE45E11D81A94E00A6CD39 /* Main.storyboard */,
 				82DE45E41D81A94E00A6CD39 /* Assets.xcassets */,
 				82DE45E61D81A94E00A6CD39 /* LaunchScreen.storyboard */,
+				4F47D2D8C491BF42C08FD83C /* Pods */,
 				82DE45E91D81A94E00A6CD39 /* Info.plist */,
 				82DE45EF1D81A97900A6CD39 /* GoogleService-Info.plist */,
 			);
@@ -282,11 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8272F1451D8A065100F0BE71 /* RoundImage.swift in Sources */,
 				828035D81D81D1B20079EE4D /* FancyField.swift in Sources */,
 				82DE45E01D81A94E00A6CD39 /* SignInVC.swift in Sources */,
 				828035D61D81D0200079EE4D /* RoundButton.swift in Sources */,
 				828035DA1D81D2EE0079EE4D /* FancyButton.swift in Sources */,
 				826774CA1D8205B300F3AB0E /* FeedVC.swift in Sources */,
+				8272F1431D8A032400F0BE71 /* PostCell.swift in Sources */,
 				82DE45DE1D81A94E00A6CD39 /* AppDelegate.swift in Sources */,
 				828035CF1D81CC840079EE4D /* FancyView.swift in Sources */,
 				828035D31D81CD140079EE4D /* Constants.swift in Sources */,
@@ -414,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89809EFB3B1F3B22F0D713C0 /* Pods-SocialNetwork.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SocialNetwork/SocialNetwork.entitlements;
 				DEVELOPMENT_TEAM = W2AQRMMZX2;
@@ -429,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C75E5E23F1C5ACED74F414DC /* Pods-SocialNetwork.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SocialNetwork/SocialNetwork.entitlements;
 				DEVELOPMENT_TEAM = W2AQRMMZX2;
