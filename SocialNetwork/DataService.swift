@@ -39,6 +39,11 @@ class DataService {
         
     }
     
+    func createFirebaseDBPost(postkey:String, postData:Dictionary<String,AnyObject>)
+    {
+        REF_POSTS.child(postkey).updateChildValues(postData)
+    }
+    
     
     
     

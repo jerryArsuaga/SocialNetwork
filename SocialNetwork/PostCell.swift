@@ -16,15 +16,21 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var noLikesLabel: UILabel!
     @IBOutlet weak var postText: UITextView!
+    
+    var post:Post!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(post:Post)
+    {
+        self.postText.text = post.caption
+        self.post = post
+        self.noLikesLabel.text = "\(post.likes)"
+        
+        
     }
 
 }
