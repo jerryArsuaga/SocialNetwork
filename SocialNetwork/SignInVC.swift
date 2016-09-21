@@ -45,16 +45,16 @@ class SignInVC: UIViewController,UITextFieldDelegate {
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil
             {
-                print("Jerry: Unable to authenticate with facebook")
+                
                 
             }else if result?.isCancelled == true{
                 
-                print("Jerry: User cancellede authentication")
+                
                 
                 
             }else
             {
-                print("Jerry: Succesfully authenticated")
+                
                 
                 
                 //Generamos las credenciales para fire base
@@ -81,7 +81,8 @@ class SignInVC: UIViewController,UITextFieldDelegate {
                 
                 if let user = user
                 {
-                    self.completeSignIn(id: user.uid);
+                    let userData = ["provider":credential.provider]
+                    self.completeSignIn(id: user.uid,userData: userData);
                     
                     
                 }
@@ -117,8 +118,8 @@ class SignInVC: UIViewController,UITextFieldDelegate {
             {
                 print("Jerry: Able to authenticate with fireBase by mail")
                 if let user = user{
-                    
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider":user.providerID]
+                    self.completeSignIn(id: user.uid,userData:userData)
                 }
             }else
             {
@@ -131,8 +132,8 @@ class SignInVC: UIViewController,UITextFieldDelegate {
                     }else
                     {
                         if let user = user{
-                        
-                            self.completeSignIn(id: user.uid)
+                            let userData = ["provider":user.providerID]
+                            self.completeSignIn(id: user.uid,userData: userData)
                         }
                     }
                 })
@@ -141,10 +142,12 @@ class SignInVC: UIViewController,UITextFieldDelegate {
         })
     }
     
-    func completeSignIn(id: String)
+    func completeSignIn(id: String,userData: Dictionary<String,String>)
     {
+     // Esto es para tener un control de sesiones y a parte así poder hacer que el usuario inicie sesión automaticamente
      let keyChainResult = KeychainWrapper.defaultKeychainWrapper.setString(id, forKey: keyUID)
         
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         performSegue(withIdentifier: "FeedVC", sender: nil)
         
         print("Jerry: Datos guardados correctamente \(keyChainResult)");
