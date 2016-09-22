@@ -191,7 +191,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
+<<<<<<< HEAD
             landmarkName = "tableView(_:cellForRowAt:)"
+=======
+            landmarkName = "signOutTapped(_:)"
+>>>>>>> master
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -239,8 +243,13 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
+<<<<<<< HEAD
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+=======
+            landmarkName = "FeedVC"
+            landmarkType = "3">
+>>>>>>> master
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -255,7 +264,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
+<<<<<<< HEAD
             landmarkName = "viewDidLoad()"
+=======
+            landmarkName = "numberOfSections(in:)"
+>>>>>>> master
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
