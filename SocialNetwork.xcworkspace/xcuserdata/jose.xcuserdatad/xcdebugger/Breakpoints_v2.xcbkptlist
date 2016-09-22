@@ -113,38 +113,6 @@
             endingLineNumber = "134"
             landmarkName = "signInTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SocialNetwork.SignInVC.(signInTapped (Swift.AnyObject) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "SocialNetwork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jose/Trabajo/apps/Curso%20Swift%203/Fire%20Base/Social%20Network/SocialNetwork/SocialNetwork/SignInVC.swift"
-                  timestampString = "495129098.843832"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SocialNetwork.SignInVC.(signInTapped (Swift.AnyObject) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "SocialNetwork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jose/Trabajo/apps/Curso%20Swift%203/Fire%20Base/Social%20Network/SocialNetwork/SocialNetwork/SignInVC.swift"
-                  timestampString = "495129098.845944"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "327">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -161,38 +129,6 @@
             endingLineNumber = "120"
             landmarkName = "signInTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SocialNetwork.SignInVC.(signInTapped (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "SocialNetwork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jose/Trabajo/apps/Curso%20Swift%203/Fire%20Base/Social%20Network/SocialNetwork/SocialNetwork/SignInVC.swift"
-                  timestampString = "495129098.850464"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "430">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SocialNetwork.SignInVC.(signInTapped (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "SocialNetwork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jose/Trabajo/apps/Curso%20Swift%203/Fire%20Base/Social%20Network/SocialNetwork/SocialNetwork/SignInVC.swift"
-                  timestampString = "495129098.852682"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "478">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -250,12 +186,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/FeedVC.swift"
-            timestampString = "496162706.70038"
+            timestampString = "496262519.492217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "signOutTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -298,13 +234,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/FeedVC.swift"
-            timestampString = "496162706.70038"
+            timestampString = "496262519.492217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "FeedVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -314,12 +250,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/FeedVC.swift"
-            timestampString = "496162706.70038"
+            timestampString = "496262519.492217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -337,6 +273,86 @@
             endingLineNumber = "80"
             landmarkName = "init(postKey:postData:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialNetwork/SignInVC.swift"
+            timestampString = "496166969.942067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "signInTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialNetwork/SignInVC.swift"
+            timestampString = "496166975.833977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "signInTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialNetwork/SignInVC.swift"
+            timestampString = "496167152.751706"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "signInTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SocialNetwork.SignInVC.(signInTapped (Swift.AnyObject) -&gt; ()).(closure #1)"
+                  moduleName = "SocialNetwork"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jose/Trabajo/apps/Curso%20Swift%203/Fire%20Base/Social%20Network/SocialNetwork/SocialNetwork/SignInVC.swift"
+                  timestampString = "496167152.757904"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1527">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SocialNetwork.SignInVC.(signInTapped (Swift.AnyObject) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "SocialNetwork"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jose/Trabajo/apps/Curso%20Swift%203/Fire%20Base/Social%20Network/SocialNetwork/SocialNetwork/SignInVC.swift"
+                  timestampString = "496167152.763445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
