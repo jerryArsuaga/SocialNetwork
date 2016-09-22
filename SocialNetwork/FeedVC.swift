@@ -10,19 +10,45 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addImageBtn: UIImageView!
+    
     
     var posts = [Post]()
+    var imagePicker:UIImagePickerController!
+    static var imageCache: NSCache<NSString,UIImage> = NSCache()
+    
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+        
+            addImageBtn.image = image
+            
+        }else
+        {
+            print("Jerry: A invalid image was selected")
+        }
+        
+        self.imagePicker.dismiss(animated: true, completion: nil)
+        
+    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.imagePicker = UIImagePickerController()
+        self.imagePicker.allowsEditing = true
+        
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        self.imagePicker.delegate = self;
         
         //VAmos a generar un listener por si algo cambia que se actualice 
         DataService.ds.REF_POSTS.observe(.value,with: { (snapshot) in
@@ -66,7 +92,14 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         {
            let post = posts[indexPath.row]
             
-            cell.configureCell(post: post)
+            if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString)
+            {
+                cell.configureCell(post: post, img: img)
+            }else{
+            
+                cell.configureCell(post: post, img:nil)
+                
+            }
             
             return cell
         }else
@@ -79,6 +112,11 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     
+    @IBAction func imagePickerTapped(_ sender: AnyObject) {
+        
+        present(self.imagePicker, animated: true, completion: nil)
+        
+    }
 
   
     @IBAction func signOutTapped(_ sender: AnyObject) {
