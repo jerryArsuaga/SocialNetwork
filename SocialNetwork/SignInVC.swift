@@ -124,7 +124,7 @@ class SignInVC: UIViewController,UITextFieldDelegate {
             }else
             {
                 print("Jerry: Unable to authenticate with fireBase by mail")
-                
+                print("Jerry:" + error.debugDescription)
                 FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                     if(error != nil)
                     {
