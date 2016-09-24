@@ -19,17 +19,60 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postText: UITextView!
     
     var post:Post!
+    var likesRef:FIRDatabaseReference!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeTapped))
+        
+        tap.numberOfTapsRequired = 1
+        
+        //Le agregamos el gesture recognizer a la imagen del corazón
+        
+        favIcon.addGestureRecognizer(tap)
+        favIcon.isUserInteractionEnabled = true
+        
        
     }
+    
+    func likeTapped(sender: UITapGestureRecognizer )
+    {
+        
+        self.likesRef.observeSingleEvent(of: .value,with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull
+            {
+                self.favIcon.image = UIImage(named: "filled-heart")
+                self.post.adjustLikes(addLike: true)
+                //self.likesRef.child(self.post.postKey).setValue(true)
+                
+                self.likesRef.setValue(true)
+                
+            }else
+            {
+                self.favIcon.image = UIImage(named: "empty-heart")
+                self.post.adjustLikes(addLike: false)
+                self.likesRef.removeValue()
+                self.likesRef.removeValue()
+            }
+            
+        })
+
+        
+    }
+    
+  
 
     func configureCell(post:Post, img:UIImage?)
     {
+        
+        
         self.postText.text = post.caption
         self.post = post
         self.noLikesLabel.text = "\(post.likes)"
+        
+        
+        self.likesRef = DataService.ds.REF_CURRENT_USER.child("likes").child(post.postKey)
         
         if img != nil
         {
@@ -60,8 +103,17 @@ class PostCell: UITableViewCell {
         }
         
         
-        
-        
+        self.likesRef.observeSingleEvent(of: .value,with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull
+            {
+                self.favIcon.image = UIImage(named: "empty-heart")
+            }else
+            {
+                self.favIcon.image = UIImage(named: "filled-heart")
+            }
+            
+        })
         
         
     }

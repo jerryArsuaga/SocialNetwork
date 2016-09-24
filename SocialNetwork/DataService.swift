@@ -6,8 +6,9 @@
 //  Copyright © 2016 Whappif. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 let DB_BASE = FIRDatabase.database().reference()
 let STORAGE_BASE = FIRStorage.storage().reference()
@@ -55,6 +56,17 @@ class DataService {
         return _REF_POST_PICS
         
     }
+    
+    var REF_CURRENT_USER:FIRDatabaseReference{
+    
+        let uid = KeychainWrapper.defaultKeychainWrapper.stringForKey(keyUID)
+        
+        let user = _REF_USERS.child(uid!)
+        
+        return user
+    }
+    
+    
     
     
     
